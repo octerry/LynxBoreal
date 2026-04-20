@@ -1,0 +1,138 @@
+/* SECTION POLICES D'ECRITURES (les importations de polices Google Font) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+
+/* SECTION COMMUNE (ce qui affecte tous les fichiers html sans exception) */
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #030E12;
+    border-bottom: 1px #fff solid;
+    box-shadow: 0 10px 20px #00000050;
+    height: 70px;
+
+    a {
+        text-decoration: none;
+        margin-left: 20px;
+    }
+
+    h1 {
+        color: #fff;
+        font-family: "Inter";
+        font-size: 20px;
+        font-weight: 300;
+    }
+}
+
+@media (max-width: 800px) {
+    header {
+        h1 {
+            display: none;
+        }
+    }
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    #header_logo {
+        height: 30px;
+    }
+
+    .header-icon {
+        height: 40%;
+        margin-right: 20px;
+    }
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #1D4D5C;
+    padding: 20px;
+    text-align: center;
+
+    h1, h2, h3, h4, h5 {
+        color: #fff;
+    }
+
+    h1, h2, h3, h4 {
+        font-family: "Josefin Sans";
+        font-weight: 200;
+        margin: 0;
+    }
+
+    h2 {
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+
+    h3 {
+        margin: 10px;
+    }
+
+    h4 {
+        margin-top: 30px;
+    }
+
+    h5 {
+        font-family: "Inter";
+        font-size: 20px;
+        margin: 0;
+    }
+
+    #footer_line {
+        width: 80%;
+        height: 1px;
+        background-color: #fff;
+    }
+}
+
+#footer_credits {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.footer-group {
+    margin-bottom: 30px;
+}
+
+
+
+/* SECTION INDEX */
+#index_presentation {
+    height: 100vh;
+    background-image: url("Source/imageLynx2.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+/* SECTION NOUS-AIDER */
+
+
+/* SECTION NOTRE-PROJET */
+
+
+/* SECTION LE-LYNX-BOREAL */
+
+
+/* SECTION ACTUALITE */
