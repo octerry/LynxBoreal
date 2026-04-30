@@ -7,7 +7,13 @@ html,
 body {
     padding: 0;
     margin: 0;
-    background-color: #030E12;
+    background-color: #fff;
+
+    transition: background-color .5s ease-in-out;
+
+    .dark{
+        background-color: #030E12;
+    }
 }
 
 header {
@@ -18,12 +24,14 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #030E12;
-    border-bottom: 1px #fff solid;
+    background-color: #fff;
+    border-bottom: 1px #ffffff00 solid;
     box-shadow: 0 10px 20px #00000050;
     height: 70px;
 
     z-index: 10;
+
+    transition: background-color .5s ease-in-out, border-bottom .5s ease-in-out;
 
     a {
         text-decoration: none;
@@ -35,6 +43,11 @@ header {
         font-family: "Inter";
         font-size: 20px;
         font-weight: 300;
+    }
+
+    .dark {
+        background-color: #030E12;
+        border-bottom: 1px #fff solid;
     }
 }
 
@@ -53,11 +66,26 @@ header {
 
     #header_logo {
         height: 30px;
+        fill: #000;
+
+        .dark {
+            fill: #fff;
+        }
     }
 
     .header-icon {
         height: 40%;
+        width: 30%;
         margin-right: 20px;
+        fill: #000;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        .dark {
+            fill: #fff;
+        }
     }
 }
 
