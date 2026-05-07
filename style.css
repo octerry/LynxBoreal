@@ -1,19 +1,25 @@
 /* SECTION POLICES D'ECRITURES (les importations de polices Google Font) */
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Julius+Sans+One&display=swap');
 
+:root {
+    --background-color: #fff;
+    --text-color: #120f24;
+}
+
+:root.dark {
+    --background-color: #030E12;
+    --text-color: #fff;
+}
+
 
 /* SECTION COMMUNE (ce qui affecte tous les fichiers html sans exception) */
 html,
 body {
     padding: 0;
     margin: 0;
-    background-color: #fff;
+    background-color: var(--background-color);
 
     transition: background-color .5s ease-in-out;
-
-    .dark{
-        background-color: #030E12;
-    }
 }
 
 header {
@@ -24,7 +30,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #fff;
+    background-color: var(--background-color);
     border-bottom: 1px #ffffff00 solid;
     box-shadow: 0 10px 20px #00000050;
     height: 70px;
@@ -39,16 +45,15 @@ header {
     }
 
     h1 {
-        color: #fff;
+        color: var(--text-color);
         font-family: "Inter";
         font-size: 20px;
         font-weight: 300;
     }
+}
 
-    .dark {
-        background-color: #030E12;
-        border-bottom: 1px #fff solid;
-    }
+header.dark {
+    border-bottom: 1px #fff solid;
 }
 
 @media (max-width: 800px) {
@@ -66,32 +71,28 @@ header {
 
     #header_logo {
         height: 30px;
-        fill: #000;
-
-        .dark {
-            fill: #fff;
-        }
+        fill: var(--text-color);
     }
 
     .header-icon {
         height: 40%;
         width: 30%;
         margin-right: 20px;
-        fill: #000;
+        fill: var(--text-color);
 
         &:hover {
             cursor: pointer;
-        }
-
-        .dark {
-            fill: #fff;
         }
     }
 }
 
 main {
-    background-color: #030E12;
-    color: #fff;
+    background-color: var(--background-color);
+    color: var(--text-color);
+
+    h1, h2 {
+        color: #fff;
+    }
 }
 
 footer {
@@ -170,8 +171,9 @@ footer {
     left: 50%;
     transform: translate(-50%, -100%);
 
-    img {
+    svg {
         width: 12vh;
+        fill: var(--text-color);
     }
 }
 
