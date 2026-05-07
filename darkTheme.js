@@ -4,7 +4,11 @@ let darkButton = document.getElementById("dark_theme_button");
 
 // On défini la variable de darkmode et on lui mets la préférence du navigateur
 let darkModeEnabled = false;
-darkModeEnabled = window.matchMedia('(prefers-color-scheme: dark)').matches;
+if (localStorage.getItem('darktheme')) {
+    darkModeEnabled = localStorage.getItem('darktheme')
+} else {
+    darkModeEnabled = window.matchMedia('(prefers-color-scheme: dark)').matches;
+}
 
 if (darkModeEnabled) {
     all.forEach(element => {
