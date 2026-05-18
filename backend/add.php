@@ -5,13 +5,15 @@
     // On récupère les variables données avec le lien en méthode POST
     $author = trim( $_POST["author"] );
     $content = trim( $_POST["content"] );
+    $title = trim( $_POST["title"] );
 
     try {
         // On mets les variables dans 
-        $stmt = $pdo->prepare('INSERT INTO news (author, content, date) VALUES (:author, :content, CURRENT_DATE())');
+        $stmt = $pdo->prepare('INSERT INTO news (author, title, content, date) VALUES (:author, :title, :content, CURRENT_DATE())');
         $stmt->execute([
             'author'=> $author,
-            'content'=> $content
+            'title'=> $title,
+            'content'=> $content,
         ]);
 
         echo 'Message ajouté !';

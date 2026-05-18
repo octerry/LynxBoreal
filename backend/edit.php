@@ -25,10 +25,12 @@
                 // On affiche les élèments dans des inputs pour les modifier
                 echo "<h2>ID<h2><br>";
                 echo "<input disabled name='id' value='" . $id . "'>";
-                echo "<h2>Auteur</h2><br>";
-                echo "<input name='author' value='" . $result[0]["author"] . "'>";
+                echo "<h2>Titre</h2><br>";
+                echo "<input name='author' value='" . $result[0]["title"] . "'>";
                 echo "<h2>Contenu du message</h2><br>";
                 echo "<textarea name='content'>" . $result[0]["content"] . "</textarea>";
+                echo "<h2>Auteur</h2><br>";
+                echo "<input name='author' value='" . $result[0]["author"] . "'>";
         
             } catch (PDOException $e) {
                 echo 'Erreur : '. $e->getMessage();

@@ -1,5 +1,5 @@
 /* SECTION POLICES D'ECRITURES (les importations de polices Google Font) */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Julius+Sans+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Julius+Sans+One&display=swap&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
     --background-color: #fff;
@@ -87,7 +87,6 @@ header.dark {
 }
 
 main {
-    background-color: var(--background-color);
     color: var(--text-color);
 
     h1, h2 {
@@ -264,3 +263,68 @@ footer {
 }
 
 /* SECTION ACTUALITE */
+#news {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#news_big_title {
+    margin-top: 100px;
+    text-align: center;
+
+    font-family: "Julius Sans One";
+    font-size: 50px;
+    font-weight: 200;
+
+    color: var(--text-color);
+}
+
+#news h1 {
+    font-size: 40px;
+    font-family: "Libre Franklin";
+    font-weight: 100;
+
+    color: var(--text-color);
+
+    margin: 0;
+}
+
+#news h2, h3 {
+    font-size: 30x;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 800;
+
+    color: var(--text-color);
+
+    margin: 0;
+    margin-left: 5px;
+}
+
+#news p {
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+}
+
+.big-news-part {
+    display: flex;
+    flex-direction: column;
+
+    padding: 20px;
+    background-color: var(--background-color);
+    
+    border-radius: 10px;
+    border: 1px var(--text-color) solid;
+
+    margin: 0 30px;
+
+    transition: background-color 1s;
+}
+
+.news-down-info-part {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}

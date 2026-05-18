@@ -8,8 +8,9 @@
 <body>
     <h1>Gestion de la base de donnée</h1>
     <form action="add.php" method="POST" style="display:flex; flex-direction:column;">
-        <input name="author" type="text" placeholder="Nom de l'auteur" required>
+        <input name="title" type="text" placeholder="Titre" required maxlength="40">
         <textarea name="content" placeholder="Contenu du message" required></textarea>
+        <input name="author" type="text" placeholder="Nom de l'auteur" required maxlength="40">
         <input type="submit" value="ajouter">
     </form>
     <h2>News</h2>
@@ -25,7 +26,7 @@
             // Et on les affiche
             echo "<ul>";
             foreach ($result as $row) {
-                echo "<li><strong>". $row["author"] . "</strong> " . $row['date'] . '<br>"' . $row["content"] . '"<br></li>';
+                echo "<li><strong>". $row["title"] . "</strong> " . $row['author'] . ' ' . $row['date'] . '<br>"' . $row["content"] . '"<br></li>';
                 echo '<a href="remove.php?id=' . $row["id"] . '">Supprimer</a><a href="edit.php?id=' . $row["id"] . '">Modifier</a><br>';
             }
             echo "</ul>";

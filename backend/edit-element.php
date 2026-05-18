@@ -4,11 +4,11 @@
 
     try {
         // On change les valeurs si les valeurs n'étaient pas vides
-        if ($_POST['author'] != ''){
-            $stmt = $pdo->prepare('UPDATE news SET author = :author WHERE id = :id');
+        if ($_POST['title'] != ''){
+            $stmt = $pdo->prepare('UPDATE news SET title = :title WHERE id = :id');
             $stmt->execute([
                 "id" => $_POST["id"],
-                "author" => $_POST["author"],
+                "title" => $_POST["title"],
             ]);
         }
         if ($_POST['content'] != ''){
@@ -16,6 +16,13 @@
             $stmt->execute([
                 "id" => $_POST["id"],
                 "content" => $_POST["content"],
+            ]);
+        }
+        if ($_POST['author'] != ''){
+            $stmt = $pdo->prepare('UPDATE news SET author = :author WHERE id = :id');
+            $stmt->execute([
+                "id" => $_POST["id"],
+                "author" => $_POST["author"],
             ]);
         }
         
