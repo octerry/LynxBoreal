@@ -1,8 +1,9 @@
 <?php 
 
-    require "connection.php";
+    require "connection.php"; // pour avoir le PDO
 
     try {
+        // On change les valeurs si les valeurs n'étaient pas vides
         if ($_POST['author'] != ''){
             $stmt = $pdo->prepare('UPDATE news SET author = :author WHERE id = :id');
             $stmt->execute([
@@ -18,6 +19,7 @@
             ]);
         }
         
+        // On renvoie la personne vers la page de base (admin-path.php pour l'instant)
         header("location: admin-path.php");
     } catch (PDOException $e) {
         echo 'Erreur : '. $e->getMessage();

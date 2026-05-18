@@ -18,13 +18,15 @@
         require "connection.php"; // pour avoir le PDO
 
         try {
+            // On va chercher les elements de news
             $result = $pdo->query("SELECT * FROM news");
             $result = $result->fetchAll(PDO::FETCH_ASSOC);
 
+            // Et on les affiche
             echo "<ul>";
             foreach ($result as $row) {
                 echo "<li><strong>". $row["author"] . "</strong> " . $row['date'] . '<br>"' . $row["content"] . '"<br></li>';
-                echo '<a href="delete.php?id=' . $row["id"] . '">Supprimer</a><a href="edit.php?id=' . $row["id"] . '">Modifier</a><br>';
+                echo '<a href="remove.php?id=' . $row["id"] . '">Supprimer</a><a href="edit.php?id=' . $row["id"] . '">Modifier</a><br>';
             }
             echo "</ul>";
         } catch (PDOException $e) {
