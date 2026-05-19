@@ -420,6 +420,7 @@ footer {
     color: var(--text-color);
 
     margin: 0;
+    margin-top: 40px;
 }
 
 #news h2, h3 {
