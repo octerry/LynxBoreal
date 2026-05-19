@@ -352,7 +352,21 @@ footer {
 
 
 /* SECTION NOTRE-PROJET */
+#project_title_presentation {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
 
+    h1 {
+        font-family: "Julius Sans One";
+        font-size: clamp(10px,10vh,15vw);
+        font-weight: 100;
+        line-height: 40%;
+
+        color: var(--text-color);
+    }
+}
 
 /* SECTION LE-LYNX-BOREAL */
 #lynx_title_presentation {
