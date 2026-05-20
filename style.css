@@ -1,9 +1,5 @@
 /* SECTION POLICES D'ECRITURES (les importations de polices Google Font) */
-<<<<<<< HEAD
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Julius+Sans+One&display=swap');
-=======
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Julius+Sans+One&display=swap&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap&family=Lalezar&display=swap&family=Geologica:wght,CRSV@100..900,0&display=swap');
->>>>>>> b4a1e0ab771f5f4d8db4259db68c9666cf25c527
 
 :root {
     --background-color: #fff;
@@ -471,6 +467,75 @@ footer {
 
 
 /* SECTION ACTUALITE */
+
+
+#news {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#news_big_title {
+    margin-top: 100px;
+    text-align: center;
+
+    font-family: "Julius Sans One";
+    font-size: 50px;
+    font-weight: 200;
+
+    color: var(--text-color);
+}
+
+#news h1 {
+    font-size: 40px;
+    font-family: "Libre Franklin";
+    font-weight: 100;
+
+    color: var(--text-color);
+
+    margin: 0;
+}
+
+#news h2, h3 {
+    font-size: 30x;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 800;
+
+    color: var(--text-color);
+
+    margin: 0;
+    margin-left: 5px;
+}
+
+#news p {
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+}
+
+.big-news-part {
+    display: flex;
+    flex-direction: column;
+
+    padding: 20px;
+    background-color: var(--background-color);
+    
+    border-radius: 10px;
+    border: 1px var(--text-color) solid;
+
+    margin: 0 30px;
+
+    transition: background-color 1s;
+}
+
+.news-down-info-part {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+
+/* SECTION QUIZZ */
 #quiz-container{
     width: 80%;
     margin: auto;
@@ -527,11 +592,20 @@ footer {
     background-color: #1D4D5C;
 }
 
+.answer-btn:hover.correct{
+    background-color: #1e5c1d;
+}
+
+.answer-btn:hover.wrong{
+    background-color: #5c1d1d;
+}
+
 #next-btn{
     margin-top: 30px;
     padding: 15px 25px;
     cursor: pointer;
 }
+
 #start-screen{
     padding-top: 200px;
 }
@@ -556,24 +630,20 @@ footer {
 }
 
 .correct{
-    background-color: green !important;
+    background-color: green;
 }
 
 .wrong{
-    background-color: darkred !important;
+    background-color: darkred;
 }
 
 /* ========================= */
-/* SECTION NOTRE PROJET */
+/*   SECTION NOTRE PROJET    */
 /* ========================= */
-
-
 
 .hero-project{
     position: relative;
 }
-
-
 
 .hero-project::before{
     content: "";
@@ -625,11 +695,7 @@ footer {
     color: white;
 
     margin: 0;
-<<<<<<< HEAD
-
-=======
     margin-top: 40px;
->>>>>>> b4a1e0ab771f5f4d8db4259db68c9666cf25c527
 }
 
 
