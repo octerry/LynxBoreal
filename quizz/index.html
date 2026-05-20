@@ -1,18 +1,42 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nous aider</title>
-    <link rel="icon" type="image/svg+xml" href="../Source/logo.svg">
-    <link rel="stylesheet" href="../style.css">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Quizz</title>
+
+    <link rel="icon"
+          type="image/svg+xml"
+          href="../Source/logo.svg">
+
+    <link rel="stylesheet"
+          href="../style.css">
+
     <script defer src="../darkTheme.js"></script>
+
+    <script defer src="quiz.js"></script>
+
 </head>
+
 <body>
+
+    <!-- HEADER -->
+
     <header>
-        <div class="header-inner"> <!-- HEADER DE REDIRECTION -->
+
+        <div class="header-inner">
+
             <a href="../">
-                <svg id="header_logo" viewBox="0 0 230 291" xmlns="http://www.w3.org/2000/svg">
+
+                <svg id="header_logo"
+                     viewBox="0 0 230 291"
+                     xmlns="http://www.w3.org/2000/svg">
+
                     <path d="M23.6973 75L9.19731 80L23.6973 48V75Z"/>
                     <path d="M38.6973 126.5C29.6973 103 27.6973 84 19.6973 84C11.1973 84 1.19731 109.5 0.197307 118.5C-0.802693 127.5 1.69731 141 14.6973 145C27.6973 149 42.3356 136 38.6973 126.5Z"/>
                     <path d="M56.6973 35L49.1973 54L56.6973 71.5L51.1973 107C53.0306 108.5 57.5973 111.6 61.1973 112C64.7973 112.4 72.3639 110.167 75.6973 109L71.6973 71.5L77.6973 54C75.6973 35 75.6973 4.5 75.6973 4.5C71.1973 7.5 64.6973 18.5 61.1973 24.5V54L56.6973 35Z"/>
@@ -21,71 +45,236 @@
                     <path d="M46.1974 165.5C26.1974 180.5 23.1972 182.5 26.6973 201.5C32.6842 234 66.6973 226 90.6975 215.5C77.6975 179.5 118.697 150 131.697 143.5C128.197 135.5 104.197 122 86.6974 125.5C69.1974 129 66.1974 150.5 46.1974 165.5Z"/>
                     <path d="M82.1973 279.5C77.6971 289 86.6974 296.5 94.6973 285C94.6973 272 108.297 242.7 112.697 235.5C118.197 226.5 183.197 165.5 203.197 143.5C219.197 125.9 225.864 103.167 227.197 94C177.197 170.5 144.697 125.5 107.197 170.5C86.3297 195.541 100.697 246.5 97.6973 258.5C94.6973 270.5 86.6974 270 82.1973 279.5Z"/>
                     <path d="M169.697 189C200.097 159.8 222.031 122.5 229.197 107.5C228.031 140 229.197 189 209.697 223C190.841 255.878 130.197 265.5 103.697 265.5C120.477 226.5 131.697 225.5 169.697 189Z"/>
+
                 </svg>
+
             </a>
-            <a href="../notre-projet/"><h1>Notre projet</h1></a>
-            <a href="../le-lynx-boreal/"><h1>Lynx Boreal</h1></a>
-            <a href="../actualite/"><h1>Actualité</h1></a>
-            <a href="../quizz/"><h1>Quizz</h1></a>
+
+            <a href="../notre-projet/">
+                <h1>Notre projet</h1>
+            </a>
+
+            <a href="../le-lynx-boreal/">
+                <h1>Lynx Boréal</h1>
+            </a>
+
+            <a href="../actualite/">
+                <h1>Actualité</h1>
+            </a>
+
+            <a href="../quizz/">
+                <h1>Quizz</h1>
+            </a>
+
         </div>
+
+
+
         <div class="header-inner">
-            <svg id="dark_theme_button" class="header-icon" width="800" height="800" viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+            <svg id="dark_theme_button"
+                 class="header-icon"
+                 width="800"
+                 height="800"
+                 viewBox="0 0 800 800"
+                 fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+
                 <path d="M400 733.333C584.095 733.333 733.333 584.095 733.333 400C733.333 215.905 584.095 66.6666 400 66.6666C215.905 66.6666 66.6665 215.905 66.6665 400C66.6665 584.095 215.905 733.333 400 733.333ZM400 666.667V133.333C547.276 133.333 666.666 252.724 666.666 400C666.666 547.276 547.276 666.667 400 666.667Z"/>
-            </svg><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-
-            <!-- Uploaded to: SVG Repo, www.svgrepo.com, Transformed by: SVG Repo Mixer Tools -->
-            <svg class="header-icon" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg" stroke="#f7f7f7">
-
-            <g id="SVGRepo_bgCarrier" stroke-width="0"/>
-
-            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
-
-            <g id="SVGRepo_iconCarrier"> <path d="M1920 1468.412v112.94H0v-112.94h1920Zm0-564.706v112.941H0V903.706h1920ZM1920 339v112.941H0V339h1920Z" fill-rule="evenodd"/> </g>
 
             </svg>
+
         </div>
+
     </header>
-    <footer> <!-- FOOTER (partie tout en bas de la page) -->
+
+
+
+    <!-- MAIN -->
+
+    <main id="quiz-main">
+
+        <section id="quiz-container">
+
+
+
+            <!-- ECRAN DE DEBUT -->
+
+            <div id="start-screen">
+
+                <h1 id="quiz-title">
+                    Quiz : Le Lynx Boréal
+                </h1>
+
+                <p id="quiz-description">
+                    Testez vos connaissances sur le lynx boréal !
+                </p>
+
+                <button id="start-btn">
+
+                    Commencer le quiz
+
+                </button>
+
+            </div>
+
+
+
+            <!-- QUIZ -->
+
+            <div id="quiz-content">
+
+                <h1 id="quiz-title">
+                    Quiz : Le Lynx Boréal
+                </h1>
+
+                <p id="quiz-description">
+                    Testez vos connaissances sur le lynx boréal !
+                </p>
+
+
+
+                <!-- QUESTION -->
+
+                <div id="question-container">
+
+                    <h2 id="question">
+
+                        Question ici
+
+                    </h2>
+
+                    <div id="answers">
+
+                        <!-- Réponses injectées en JS -->
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- BOUTON QUESTION SUIVANTE -->
+
+                <button id="next-btn">
+
+                    Question suivante
+
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
         <h1>YNX</h1>
+
         <h2>Projet transversal étudiant</h2>
+
         <h3>Crédits</h3>
+
         <div id="footer_line"></div>
+
+
+
         <div id="footer_credits">
-            <div id="web_group" class="footer-group">
+
+            <div id="web_group"
+                 class="footer-group">
+
                 <h3>Equipe Web</h3>
-                <h4>Developpeurs Fullstack</h4>
+
+                <h4>Développeurs Fullstack</h4>
+
                 <h5>Amina EL GUENDOUZ</h5>
+
                 <h5>Terry SEGAUNES</h5>
+
             </div>
-            <div id="design_group" class="footer-group">
+
+
+
+            <div id="design_group"
+                 class="footer-group">
+
                 <h3>Equipe Conception</h3>
+
                 <h4>Designers</h4>
+
                 <h5>Sarah VERDIER</h5>
+
                 <h5>Jiarui CHEN</h5>
+
                 <h4>Marketing</h4>
+
                 <h5>Enzo SOARES ESTEVES</h5>
+
                 <h5>Zakarya KHODJA</h5>
+
             </div>
-            <div id="3d_group" class="footer-group">
+
+
+
+            <div id="3d_group"
+                 class="footer-group">
+
                 <h3>Equipe 3D</h3>
+
                 <h4>Directeur production</h4>
+
                 <h5>Antoine PEYRABERE</h5>
+
                 <h4>Artistes animateurs</h4>
+
                 <h5>Maxime FERRE</h5>
+
                 <h5>Lucas LE ROY</h5>
+
             </div>
-            <div id="jv_group" class="footer-group">
+
+
+
+            <div id="jv_group"
+                 class="footer-group">
+
                 <h3>Equipe JV</h3>
+
                 <h4>Game Designer</h4>
+
                 <h5>Maël BOULANGER</h5>
+
                 <h4>Game Artist</h4>
+
                 <h5>Zacharie LUKUNKU</h5>
+
                 <h4>Game Programmers</h4>
+
                 <h5>Loïc ZHOU</h5>
+
                 <h5>Rudy ANSEL</h5>
+
             </div>
+
         </div>
-        <a href="https://iim.fr"><img src="../Source/iim-logo.svg" alt="iim-logo"></a>
+
+
+
+        <a href="https://iim.fr">
+
+            <img src="../Source/iim-logo.svg"
+                 alt="iim-logo">
+
+        </a>
+
     </footer>
+
 </body>
+
 </html>
