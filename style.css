@@ -930,3 +930,10 @@ footer {
     background-color: #10232B;
 
 }
+
+/* PROMOTION */
+#promo_press {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
