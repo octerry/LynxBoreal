@@ -5,7 +5,7 @@ let darkButton = document.getElementById("dark_theme_button");
 // On défini la variable de darkmode et on lui mets la préférence du navigateur
 let darkModeEnabled = false;
 if (localStorage.getItem('darktheme')) {
-    darkModeEnabled = localStorage.getItem('darktheme')
+    darkModeEnabled = JSON.parse(localStorage.getItem('darktheme'))
 } else {
     darkModeEnabled = window.matchMedia('(prefers-color-scheme: dark)').matches;
 }
@@ -13,8 +13,11 @@ if (localStorage.getItem('darktheme')) {
 if (darkModeEnabled) {
     all.forEach(element => {
         element.classList.add("dark")
+        localStorage.setItem("darktheme",JSON.stringify(true))
     });
 }
+
+console.log(darkModeEnabled)
 
 darkButton.addEventListener("click", ()=>{
     darkModeEnabled = !darkModeEnabled;
@@ -22,10 +25,12 @@ darkButton.addEventListener("click", ()=>{
     if (darkModeEnabled) {
         all.forEach(element => {
             element.classList.add("dark")
+            localStorage.setItem("darktheme",JSON.stringify(true))
         });
     } else {
         all.forEach(element => {
             element.classList.remove("dark")
+            localStorage.setItem("darktheme",JSON.stringify(false))
         });
     }
 })

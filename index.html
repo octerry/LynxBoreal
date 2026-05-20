@@ -8,6 +8,12 @@
     <title>YNX</title>
     <link rel="stylesheet" href="style.css">
     <script defer src="darkTheme.js"></script>
+<<<<<<< HEAD
+=======
+    <script defer src="downArrow.js"></script>
+    <script defer src="hamburgerMenu.js"></script>
+    <script defer src="imageScroll.js"></script>
+>>>>>>> b4a1e0ab771f5f4d8db4259db68c9666cf25c527
 </head>
 <body>
     <header>
@@ -32,18 +38,19 @@
         <div class="header-inner">
             <svg id="dark_theme_button" class="header-icon" width="800" height="800" viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M400 733.333C584.095 733.333 733.333 584.095 733.333 400C733.333 215.905 584.095 66.6666 400 66.6666C215.905 66.6666 66.6665 215.905 66.6665 400C66.6665 584.095 215.905 733.333 400 733.333ZM400 666.667V133.333C547.276 133.333 666.666 252.724 666.666 400C666.666 547.276 547.276 666.667 400 666.667Z"/>
-            </svg><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-
-            <!-- Uploaded to: SVG Repo, www.svgrepo.com, Transformed by: SVG Repo Mixer Tools -->
-            <svg class="header-icon" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg" stroke="#f7f7f7">
-
-            <g id="SVGRepo_bgCarrier" stroke-width="0"/>
-
-            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
-
-            <g id="SVGRepo_iconCarrier"> <path d="M1920 1468.412v112.94H0v-112.94h1920Zm0-564.706v112.941H0V903.706h1920ZM1920 339v112.941H0V339h1920Z" fill-rule="evenodd"/> </g>
-
             </svg>
+            <svg id="hamburger_menu" class="header-icon" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg" stroke="#f7f7f7">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                <g id="SVGRepo_iconCarrier"> <path d="M1920 1468.412v112.94H0v-112.94h1920Zm0-564.706v112.941H0V903.706h1920ZM1920 339v112.941H0V339h1920Z" fill-rule="evenodd"/> </g>
+            </svg>
+        </div>
+        <div id="header_popup">
+            <a href="."><h1 class="popup-link">Accueil</h1></a>
+            <a href="./notre-projet/"><h1 class="popup-link">Notre projet</h1></a>
+            <a href="./le-lynx-boreal/"><h1 class="popup-link">Lynx Boreal</h1></a>
+            <a href="./actualite/"><h1 class="popup-link">Actualité</h1></a>
+            <a href="./quizz/"><h1 class="popup-link">Quizz</h1></a>
         </div>
     </header>
     <main> <!-- PARTIE PRINCIPALE DU SITE -->
@@ -57,9 +64,29 @@
                 <path d="M131.95 0L140.875 7.92925L70.4375 80.5L0 7.92925L8.92544 0L70.4375 75.75L131.95 0Z"/>
             </svg>
         </div>
-        <p class="description">
-            Lorem ipsum dolor sit amet consectetur adipiscing elit. Pretium tellus duis convallis tempus leo eu aenean. Iaculis massa nisl malesuada lacinia integer nunc posuere. Conubia nostra inceptos himenaeos orci varius natoque penatibus. Nulla molestie mattis scelerisque maximus eget fermentum odio. Blandit quis suspendisse aliquet nisi sodales consequat magna. Ligula congue sollicitudin erat viverra ac tincidunt nam. Velit aliquam imperdiet mollis nullam volutpat porttitor ullamcorper. Dui felis venenatis ultrices proin libero feugiat tristique. Cubilia curae hac habitasse platea dictumst lorem ipsum. Sem placerat in id cursus mi pretium tellus. Fringilla lacus nec metus bibendum egestas iaculis massa. Taciti sociosqu ad litora torquent per conubia nostra. Ridiculus mus donec rhoncus eros lobortis nulla molestie. Mauris pharetra vestibulum fusce dictum risus blandit quis. Finibus facilisis dapibus etiam interdum tortor ligula congue. Justo lectus commodo augue arcu dignissim velit aliquam. Primis vulputate ornare sagittis vehicula praesent dui felis. Senectus netus suscipit auctor curabitur facilisi cubilia curae. Quisque faucibus ex sapien vitae pellentesque sem placerat.
-        </p>
+        <div class="description main-description">
+            <h1>Qui sommes nous ?</h1>
+            <p>
+                Nous sommes une association qui a pour but, la protection du lynx Boréal, un prédateur discret mais essentiel. Invisible aux yeux de beaucoup, il joue pourtant un rôle clé dans l’équilibre des écosystèmes.
+            </p>
+        </div>
+        <a href="./le-lynx-boreal/">
+            <div id="main_lynx">
+                <h1>Qui est ce "Lynx Boréal" ?</h1>
+            </div>
+        </a>
+        <a href="./notre-projet/">
+            <div id="main_project" class="description main-description">
+                <h1>Notre projet</h1>
+                <p>
+                    Notre projet est de montrer concrètement que protéger une seule espèce peut protéger tout un système en partageant la cause du Lynx Boreal sous formes de créations libres d’accès.
+                </p>
+            </div>
+        </a>
+        <div class="description main-description">
+            <h1>Tu penses tout savoir sur le Lynx Boréal ?</h1>
+            <a href="./quizz/">Passer le Quizz</a>
+        </div>
     </main>
     <footer> <!-- FOOTER (partie tout en bas de la page) -->
         <h1>YNX</h1>

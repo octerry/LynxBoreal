@@ -1,13 +1,19 @@
 /* SECTION POLICES D'ECRITURES (les importations de polices Google Font) */
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Julius+Sans+One&display=swap');
+=======
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Julius+Sans+One&display=swap&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap&family=Lalezar&display=swap&family=Geologica:wght,CRSV@100..900,0&display=swap');
+>>>>>>> b4a1e0ab771f5f4d8db4259db68c9666cf25c527
 
 :root {
     --background-color: #fff;
+    --second-bg-color: #ddd;
     --text-color: #120f24;
 }
 
 :root.dark {
     --background-color: #030E12;
+    --second-bg-color: #0b2934;
     --text-color: #fff;
 }
 
@@ -20,6 +26,11 @@ body {
     background-color: var(--background-color);
 
     transition: background-color .5s ease-in-out;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
 }
 
 header {
@@ -56,9 +67,45 @@ header.dark {
     border-bottom: 1px #fff solid;
 }
 
+#header_popup {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border: 1px #fff solid;
+    border-radius: 10px;
+    padding: 0 50px 0 10px;
+    box-shadow: 10px 10px 20px #00000080;
+
+    background-color: var(--second-bg-color);
+
+    transition: opacity .3s ease-in-out, transform .3s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(20px);
+}
+
+#header_popup.open {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateX(0);
+}
+
+#header_popup a {
+    margin: 0;
+}
+
+.popup-link {
+    transition: transform .3s ease-out, text-shadow .2s ease-in-out;
+
+    &:hover {
+        transform: translateX(5px);
+        text-shadow: 0 0 20px var(--text-color);
+    }
+}
+
 @media (max-width: 800px) {
     header {
-        h1 {
+        h1:not(.popup-link) {
             display: none;
         }
     }
@@ -68,22 +115,31 @@ header.dark {
     display: flex;
     align-items: center;
     height: 100%;
+}
 
-    #header_logo {
-        height: 40px;
-        fill: var(--text-color);
+#header_logo {
+    height: 40px;
+    fill: var(--text-color);
+}
+
+.header-icon {
+    height: 40%;
+    width: 30%;
+    margin-right: 20px;
+    fill: var(--text-color);
+
+    &:hover {
+        cursor: pointer;
     }
+}
 
-    .header-icon {
-        height: 40%;
-        width: 30%;
-        margin-right: 20px;
-        fill: var(--text-color);
+#hamburger_menu {
+    z-index: 10;
+    transition: transform .3s ease-in-out;
+}
 
-        &:hover {
-            cursor: pointer;
-        }
-    }
+#hamburger_menu.open {
+    transform: rotate(-.5turn);
 }
 
 main {
@@ -213,22 +269,104 @@ footer {
 }
 
 
+.main-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-description a {
+    font-size: 25px;
+    text-decoration: underline;
+
+    transition: transform .3s ease-in-out;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+#main_lynx{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 500px;
+    width: 100%;
+    box-shadow: inset 10px 10px 20px #00000080;
+
+    background-image: url("Source/imageLynx5.jpeg");
+    background-position: 50% 0;
+    background-size: clamp(1000px,100vw,100vw);
+
+    filter:saturate(.6);
+    transition: filter .3s ease-in-out, background-size .3s ease-in-out;
+}
+
+#main_lynx:hover{
+    filter:saturate(1);
+    background-size: clamp(950px,95vw,95vw);
+
+    h1 {
+        transform: scaleX(1.05);
+        text-shadow: 0 0 0;
+    }
+}
+
+#main_lynx h1 {
+    font-family: "Geologica";
+    font-size: 6vw;
+    -webkit-text-stroke: #fff 1px;
+    text-shadow: 5px 5px 10px #00000080;
+    
+    color: #ffffff60;
+
+    transition: transform .5s ease-in-out, text-shadow .5s ease-in-out;
+}
+
+#main_project {
+    padding: 0 30px;
+    margin: 0;
+    border: #ffffff00 1px solid;
+
+    transition: border .3s ease-in-out;
+}
+
+#main_project:hover {
+    border: #fff 1px solid;
+}
+
 /* SECTION NOUS-AIDER */
 
 
 /* SECTION NOTRE-PROJET */
+#project_title_presentation {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
 
+    h1 {
+        font-family: "Julius Sans One";
+        font-size: clamp(10px,10vh,15vw);
+        font-weight: 100;
+        line-height: 40%;
+
+        color: var(--text-color);
+    }
+}
 
 /* SECTION LE-LYNX-BOREAL */
 #lynx_title_presentation {
     position: absolute;
     top: 50%;
-    left: 20vh;
+    left: 10vw;
     transform: translateY(-50%);
 
     h1 {
         font-family: "Julius Sans One";
-        font-size: 100px;
+        font-size: clamp(10px,10vh,15vw);
         font-weight: 100;
         line-height: 40%;
     }
@@ -237,13 +375,97 @@ footer {
 #lynx_downpart {
     padding: 1vh 2vh;
     padding-bottom: 30px;
-    background-color: #00000040;
-    border-radius: 2vh;
-    
-    h2 {
-        font-family: "Cormorant Upright";
-        font-size: 4vh;
-        margin-top: 0;
+    background-color: var(--background-color);
+    border-radius: 2vh 2vh 0 0;
+
+    transition: background-color .5s ease-in-out;
+}
+
+#lynx_downpart h2 {
+    font-family: "Cormorant Upright";
+    font-size: 4vh;
+
+    color: var(--text-color);
+    margin-top: 0;
+}
+
+.lynx-title-part {
+    text-align: center;
+
+    font-size: 50px;
+    font-family: "Lalezar";
+    font-weight: 100;
+}
+
+#lynx_second_parent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.lynx-second-part {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    max-width: 800px;
+    margin-bottom: 20px;
+}
+
+.lynx-second-part img {
+    width: clamp(20px,300px,40vw);
+    border-radius: 200px 0 200px 0;
+}
+
+.lynx-second-part img:nth-child(2) {
+    border-radius: 0 200px 0 200px;
+}
+
+.lynx-second-part-text {
+    margin: 0 20px;
+}
+
+.down-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 20px;
+}
+
+.lynx-second-part-text h3, p {
+    font-family: "Geologica";
+    margin-left: 0;
+}
+
+#lynx_progress {
+    position: absolute;
+    left: 40px;
+    width: 200px;
+}
+
+.lynx-third-part-progress-text {
+    margin: 0 8vw 100px 300px;
+    font-size: 20px;
+}
+
+.lynx-third-part-after-text {
+    text-align: center;
+    max-width: 800px;
+    justify-self: center;
+
+    font-weight: 100;
+    font-size: 20px;
+}
+
+@media (max-width:800px) {
+    .lynx-third-part-progress-text {
+        margin: 0 8vw 100px 8vw;
+    }
+    #lynx_progress {
+        display: none;
     }
 }
 
@@ -403,7 +625,11 @@ footer {
     color: white;
 
     margin: 0;
+<<<<<<< HEAD
 
+=======
+    margin-top: 40px;
+>>>>>>> b4a1e0ab771f5f4d8db4259db68c9666cf25c527
 }
 
 
