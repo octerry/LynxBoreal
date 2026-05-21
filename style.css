@@ -222,10 +222,15 @@ footer {
     top: 100%;
     left: 50%;
     transform: translate(-50%, -100%);
+}
 
-    svg {
-        width: 12vh;
-        fill: var(--text-color);
+.downpart-presentation svg {
+    animation: down-arrow-animation infinite 2s ease-in-out;
+    width: 12vh;
+    fill: var(--text-color);
+
+    &:hover {
+        cursor: pointer;
     }
 }
 
@@ -233,6 +238,19 @@ footer {
     margin: 30px;
     font-family: "Inter";
     font-size: 20px;
+}
+
+
+@keyframes down-arrow-animation {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(25%);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
 
 
