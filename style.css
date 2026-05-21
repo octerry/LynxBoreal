@@ -681,14 +681,13 @@ footer {
 
     height: 500px;
 
-    object-fit: cover;
+    object-fit: contain;
 
     border-radius: 25px;
 
     transition: 0.4s;
 
     box-shadow: 0 10px 30px #00000060;
-
 }
 
 
