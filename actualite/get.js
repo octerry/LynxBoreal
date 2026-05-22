@@ -1,6 +1,6 @@
 const news = document.getElementById('news');
 
-fetch("http://terrysegaunes.com/ynx/get-json.php")
+fetch("https://terrysegaunes.com/ynx/get-json.php")
     .then(res=>{
         return res.json();
     })
